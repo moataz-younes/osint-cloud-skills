@@ -1,0 +1,297 @@
+[
+  {
+    "id": "cloud-org-recon",
+    "title": "Cloud Organization Recon",
+    "category": "reconnaissance",
+    "level": "beginner",
+    "providers": ["aws", "azure", "gcp", "generic"],
+    "tags": ["company", "domains", "asn", "whois"],
+    "summary": "Map an organization's public cloud footprint from domains, ASN, and official pages.",
+    "objective": "Build a starter inventory of cloud-related domains and services owned by a target organization.",
+    "steps": [
+      "Collect official domains from website, press, and LinkedIn company page.",
+      "Run WHOIS / RDAP on primary domains and note registrar and related contacts.",
+      "Identify ASN and IP ranges via public BGP / whois services.",
+      "List subdomains from Certificate Transparency (crt.sh) and public DNS datasets.",
+      "Tag findings by likely provider (amazonaws.com, azurewebsites.net, googleusercontent.com, cloudflare, etc.)."
+    ],
+    "queries": [
+      "site:company.com (AWS OR Azure OR GCP OR \"cloud\")",
+      "companyName (\"powered by\" OR hosted OR cloud)"
+    ],
+    "tools": ["crt.sh", "SecurityTrails", "WHOIS/RDAP", "DNSDumpster", "Amass (passive)"],
+    "outputs": ["domain inventory", "ASN notes", "provider hypothesis map"],
+    "ethics": "Use only public sources and authorized investigation scopes."
+  },
+  {
+    "id": "ct-cloud-certs",
+    "title": "Certificate Transparency for Cloud Hosts",
+    "category": "discovery",
+    "level": "beginner",
+    "providers": ["aws", "azure", "gcp", "generic"],
+    "tags": ["tls", "crt.sh", "subdomains", "saas"],
+    "summary": "Use Certificate Transparency logs to find cloud hostnames and SaaS endpoints.",
+    "objective": "Discover hostnames that reveal cloud apps, staging, and vendor integrations.",
+    "steps": [
+      "Query crt.sh for %.target-domain.com.",
+      "Export unique Common Names and SANs.",
+      "Filter names containing cloud keywords: s3, blob, storage, appspot, azure, cloudfront, vercel, netlify.",
+      "Group by environment hints: staging, dev, uat, api, admin.",
+      "Validate live hosts with passive HTTP checks only when authorized."
+    ],
+    "queries": [
+      "%.example.com",
+      "%.example.com AND (cloudfront OR azure OR appspot OR s3)"
+    ],
+    "tools": ["crt.sh", "Certspotter", "jq", "csvkit"],
+    "outputs": ["hostname list", "environment tags"],
+    "ethics": "CT data is public; active probing of systems requires authorization."
+  },
+  {
+    "id": "public-bucket-osint",
+    "title": "Public Cloud Storage OSINT",
+    "category": "storage",
+    "level": "intermediate",
+    "providers": ["aws", "azure", "gcp"],
+    "tags": ["s3", "blob", "gcs", "open-data", "leak-hunting"],
+    "summary": "Find and document publicly listed cloud storage containers using open sources — not brute force.",
+    "objective": "Identify storage endpoints that are intentionally or accidentally public and record evidence responsibly.",
+    "steps": [
+      "Search public indexes and search engines for storage URLs tied to the org name.",
+      "Look for official open-data portals first (government/company open datasets).",
+      "Note naming patterns from public docs: org-public, org-assets, org-media.",
+      "When a public listing is found, capture URL, listing timestamp, and sample filenames only.",
+      "Report exposure through responsible disclosure if the data appears sensitive."
+    ],
+    "queries": [
+      "site:s3.amazonaws.com \"company\"",
+      "site:blob.core.windows.net \"company\"",
+      "site:storage.googleapis.com \"company\"",
+      "\"index of\" company (bucket OR blob OR storage)"
+    ],
+    "tools": ["Google/Bing", "GrayhatWarfare (public listings)", "browser", "archive.org"],
+    "outputs": ["public URL evidence log", "disclosure draft"],
+    "ethics": "Do not attempt unauthorized access, credential stuffing, or downloading private data. Prefer responsible disclosure."
+  },
+  {
+    "id": "github-cloud-osint",
+    "title": "GitHub Cloud Config OSINT",
+    "category": "code-osint",
+    "level": "intermediate",
+    "providers": ["aws", "azure", "gcp", "generic"],
+    "tags": ["github", "secrets", "iac", "terraform", "ci-cd"],
+    "summary": "Search public code for cloud architecture clues and accidental exposure indicators.",
+    "objective": "Map cloud stack and detect possible leaked configuration patterns in public repositories.",
+    "steps": [
+      "Search org/user GitHub for Terraform, CloudFormation, Bicep, Pulumi files.",
+      "Look for public references to account IDs, resource names, regions, and bucket names.",
+      "Scan for high-risk strings in public code: AWS_ACCESS_KEY_ID, Begin Private Key, connection strings.",
+      "If secrets appear real, do not abuse them — notify the owner and revoke guidance.",
+      "Document stack choices (serverless, k8s, CDN) for investigation context."
+    ],
+    "queries": [
+      "org:ORG terraform aws_s3_bucket",
+      "\"AKIA\" companyName",
+      "filename:*.tf \"bucket\" company",
+      "\"DefaultEndpointsProtocol=https;AccountName=\""
+    ],
+    "tools": ["GitHub search", "GitHub Code Search", "trufflehog (authorized)", "gitleaks (authorized)"],
+    "outputs": ["stack profile", "exposure findings (if any)"],
+    "ethics": "Never use discovered credentials. Report and rotate."
+  },
+  {
+    "id": "cloud-dns-patterns",
+    "title": "Cloud DNS & CDN Pattern Mapping",
+    "category": "network",
+    "level": "beginner",
+    "providers": ["aws", "azure", "gcp", "cloudflare", "generic"],
+    "tags": ["dns", "cdn", "cname", "edge"],
+    "summary": "Identify cloud/CDN providers from public DNS records and CNAME chains.",
+    "objective": "Determine which edge and origin providers an organization uses.",
+    "steps": [
+      "Resolve NS, A/AAAA, MX, TXT, and CNAME for primary domains.",
+      "Follow CNAME chains to CloudFront, Fastly, Akamai, Azure Front Door, Cloudflare.",
+      "Record SPF/DKIM/DMARC vendors that reveal SaaS mail stacks.",
+      "Note regional hints from endpoints and TXT verification records.",
+      "Build a simple provider matrix for the case file."
+    ],
+    "queries": [
+      "dig CNAME www.example.com",
+      "TXT example.com (spf1 / verification tokens)"
+    ],
+    "tools": ["dig", "nslookup", "DNSChecker", "SecurityTrails"],
+    "outputs": ["provider matrix", "DNS evidence sheet"],
+    "ethics": "Passive DNS lookups on public domains are generally acceptable; stay within scope."
+  },
+  {
+    "id": "azure-tenant-osint",
+    "title": "Azure / Microsoft 365 Tenant OSINT",
+    "category": "identity",
+    "level": "intermediate",
+    "providers": ["azure"],
+    "tags": ["aad", "m365", "tenant", "federation"],
+    "summary": "Use public Microsoft endpoints to learn tenant and federation clues.",
+    "objective": "Identify tenant name, federation status, and related domains without authenticated access.",
+    "steps": [
+      "Start from known email domains of the organization.",
+      "Use public OpenID / getuserrealm style endpoints for domain realm discovery.",
+      "Note managed vs federated realm and IdP hints.",
+      "Correlate with DNS TXT verification and Autodiscover CNAMEs.",
+      "Add findings to identity topology notes."
+    ],
+    "queries": [
+      "login.microsoftonline.com getuserrealm Domain=example.com",
+      "autodiscover CNAME for example.com"
+    ],
+    "tools": ["browser", "curl", "AADInternals docs (read-only methods)"],
+    "outputs": ["tenant/federation notes"],
+    "ethics": "Stick to unauthenticated public discovery methods and authorized scopes."
+  },
+  {
+    "id": "aws-public-footprint",
+    "title": "AWS Public Footprint Clues",
+    "category": "provider",
+    "level": "intermediate",
+    "providers": ["aws"],
+    "tags": ["aws", "cloudfront", "s3", "amplify", "api-gateway"],
+    "summary": "Recognize public AWS service host patterns linked to an organization.",
+    "objective": "List likely AWS-hosted assets visible from open sources.",
+    "steps": [
+      "Search for CloudFront distributions and S3 website endpoints mentioning the brand.",
+      "Check public JS/CSS asset URLs for s3.amazonaws.com or cloudfront.net.",
+      "Review job posts and engineering blogs for region / service mentions.",
+      "Correlate subdomain names like api, cdn, static, media with AWS patterns.",
+      "Keep an evidence table: URL, service guess, first-seen date."
+    ],
+    "queries": [
+      "site:cloudfront.net \"company\"",
+      "site:s3.amazonaws.com \"company\"",
+      "\"amazonaws.com\" \"company.com\""
+    ],
+    "tools": ["search engines", "builtwith/wappalyzer", "crt.sh"],
+    "outputs": ["AWS asset candidates list"],
+    "ethics": "No unauthorized API calls against accounts you do not own."
+  },
+  {
+    "id": "gcp-public-footprint",
+    "title": "GCP Public Footprint Clues",
+    "category": "provider",
+    "level": "intermediate",
+    "providers": ["gcp"],
+    "tags": ["gcp", "appspot", "firebase", "gcs", "run.app"],
+    "summary": "Find Google Cloud public endpoints and app hosts related to a target.",
+    "objective": "Document Firebase/App Engine/Cloud Run/GCS clues from public web and CT logs.",
+    "steps": [
+      "Search CT and web for appspot.com, run.app, web.app, firebaseio.com tied to brand.",
+      "Inspect public mobile/web apps for Firebase project IDs when legally obtained.",
+      "Note storage.googleapis.com links embedded in public pages.",
+      "Record project-like identifiers appearing in public JS configs.",
+      "Validate only with passive observations unless authorized."
+    ],
+    "queries": [
+      "site:appspot.com company",
+      "site:run.app company",
+      "site:firebaseio.com company",
+      "site:storage.googleapis.com company"
+    ],
+    "tools": ["crt.sh", "search engines", "browser devtools"],
+    "outputs": ["GCP endpoint inventory"],
+    "ethics": "Do not abuse Firebase/GCP APIs or bypass security rules."
+  },
+  {
+    "id": "cloud-leak-monitoring",
+    "title": "Cloud Leak & Paste Monitoring",
+    "category": "monitoring",
+    "level": "beginner",
+    "providers": ["generic"],
+    "tags": ["pastes", "leaks", "alerting", "brand"],
+    "summary": "Monitor public pastes and leak indexes for cloud credentials and asset mentions.",
+    "objective": "Detect early public exposure of cloud secrets or internal hostnames.",
+    "steps": [
+      "Define watch terms: legal name, domains, product names, unique bucket prefixes.",
+      "Track paste sites, public Telegram indexes, and leak alert feeds you are allowed to use.",
+      "Triage hits: false positive vs real secret pattern.",
+      "If confirmed, initiate incident response / rotation checklist.",
+      "Keep a timeline of first public sighting."
+    ],
+    "queries": [
+      "\"AKIA\" companyDomain",
+      "\"Begin Private Key\" companyDomain",
+      "\"blob.core.windows.net\" company"
+    ],
+    "tools": ["Google Alerts", "paste monitors", "Have I Been Pwned (domains you own)"],
+    "outputs": ["alert playbook", "incident timeline"],
+    "ethics": "Monitor brands you own or are contracted to protect."
+  },
+  {
+    "id": "saas-cloud-stack",
+    "title": "SaaS & Cloud Stack Fingerprinting",
+    "category": "reconnaissance",
+    "level": "beginner",
+    "providers": ["generic"],
+    "tags": ["saas", "tech-stack", "okta", "cloudflare", "vercel"],
+    "summary": "Identify cloud SaaS building blocks from public website signals.",
+    "objective": "Produce a quick stack card: CDN, auth, hosting, analytics, support tools.",
+    "steps": [
+      "Inspect public HTML/JS for vendor scripts and verification meta tags.",
+      "Check HTTP headers and cookie names on public pages.",
+      "Use public tech profilers for confirmation, not as sole evidence.",
+      "Map auth vendors (Okta, Auth0, Cognito, Azure AD B2C).",
+      "Summarize likely attack-surface categories for defensive review."
+    ],
+    "queries": [
+      "site:company.com (Okta OR Auth0 OR Cloudflare OR Vercel OR Netlify)"
+    ],
+    "tools": ["Wappalyzer", "BuiltWith", "browser devtools"],
+    "outputs": ["stack card"],
+    "ethics": "Fingerprinting public marketing sites only unless authorized for deeper testing."
+  },
+  {
+    "id": "wayback-cloud-assets",
+    "title": "Wayback & Archive Cloud Asset Hunting",
+    "category": "archives",
+    "level": "beginner",
+    "providers": ["generic", "aws", "azure", "gcp"],
+    "tags": ["wayback", "archive", "historical", "js"],
+    "summary": "Recover historical cloud URLs and keys references from public web archives.",
+    "objective": "Find retired endpoints, old storage URLs, and leaked config remnants in archives.",
+    "steps": [
+      "Query archive.org for target domains and interesting paths (/static, /assets, /config).",
+      "Download historical JS bundles that may contain old API endpoints.",
+      "Search archived text for storage host patterns.",
+      "Compare past vs present infrastructure for investigation timelines.",
+      "Store archive URLs as citations in the case file."
+    ],
+    "queries": [
+      "https://web.archive.org/cdx/search/cdx?url=*.example.com/*&output=json",
+      "archive.org company s3 OR cloudfront OR azurewebsites"
+    ],
+    "tools": ["Wayback Machine", "CDX API", "grep"],
+    "outputs": ["historical asset timeline"],
+    "ethics": "Archives are public; still handle any sensitive remnants responsibly."
+  },
+  {
+    "id": "cloud-incident-osint",
+    "title": "Cloud Incident OSINT Checklist",
+    "category": "investigation",
+    "level": "advanced",
+    "providers": ["aws", "azure", "gcp", "generic"],
+    "tags": ["incident-response", "casefile", "evidence", "timeline"],
+    "summary": "Structured OSINT workflow when investigating a suspected cloud-related incident.",
+    "objective": "Collect open-source context around a cloud incident without contaminating evidence.",
+    "steps": [
+      "Define scope: org, domains, time window, incident type (leak, defacement, takeover claim).",
+      "Pull public mentions: news, social, paste, vendor status pages.",
+      "Rebuild public asset map (DNS/CT/stack) for the window.",
+      "Preserve evidence with timestamps, hashes of saved pages, and source URLs.",
+      "Separate confirmed facts vs hypotheses in the report."
+    ],
+    "queries": [
+      "company (breach OR leak OR \"data exposed\" OR ransomware)",
+      "status.aws.amazon.com / azure status / gcp status correlation"
+    ],
+    "tools": ["case notes template", "archive.org", "social search", "timeline sheet"],
+    "outputs": ["OSINT incident brief"],
+    "ethics": "Coordinate with lawful authority / client authorization. Do not access victim systems without permission."
+  }
+]
