@@ -1,0 +1,33 @@
+{
+  "id": "metadata-extraction",
+  "title": "File Metadata Extraction",
+  "category": "documents",
+  "level": "intermediate",
+  "tags": [
+    "exif",
+    "metadata",
+    "pdf"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Extract metadata from files obtained legally.",
+  "objective": "Metadata sheet (author, software, timestamps).",
+  "steps": [
+    "Hash the file first (SHA256).",
+    "Extract PDF/Office/image metadata.",
+    "Note creator tools and edit history clues.",
+    "Compare timestamps to case timeline.",
+    "Keep original + analysis copies separate."
+  ],
+  "queries": [],
+  "tools": [
+    "exiftool",
+    "pdfinfo"
+  ],
+  "outputs": [
+    "metadata sheet"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "documents"
+}

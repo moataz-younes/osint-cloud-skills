@@ -1,0 +1,36 @@
+{
+  "id": "mail-infra-osint",
+  "title": "Mail Infrastructure OSINT",
+  "category": "network",
+  "level": "beginner",
+  "tags": [
+    "email",
+    "spf",
+    "mx"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Profile outbound/inbound mail stack from public DNS.",
+  "objective": "Mail vendor map and security posture snapshot.",
+  "steps": [
+    "Collect MX and TXT auth records.",
+    "Identify Google/Microsoft/Proofpoint/etc.",
+    "Check DMARC policy strength.",
+    "Note third-party senders in SPF includes.",
+    "Flag lookalike domains lacking alignment."
+  ],
+  "queries": [
+    "dig MX example.com",
+    "dig TXT example.com"
+  ],
+  "tools": [
+    "dig",
+    "MXToolbox"
+  ],
+  "outputs": [
+    "mail stack card"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "network"
+}

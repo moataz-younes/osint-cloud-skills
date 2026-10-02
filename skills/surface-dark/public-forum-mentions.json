@@ -1,0 +1,36 @@
+{
+  "id": "public-forum-mentions",
+  "title": "Public Forum Mention Sweep",
+  "category": "surface-dark",
+  "level": "beginner",
+  "tags": [
+    "forums",
+    "mentions",
+    "brand"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Search public forums for brand/incident mentions.",
+  "objective": "Forum mention log.",
+  "steps": [
+    "Identify relevant public forums.",
+    "Search brand/aliases/incident terms.",
+    "Preserve thread URLs and dates.",
+    "Assess credibility cautiously.",
+    "Do not join closed illicit communities."
+  ],
+  "queries": [
+    "site:reddit.com company breach",
+    "company leak forum"
+  ],
+  "tools": [
+    "Reddit",
+    "public forum search"
+  ],
+  "outputs": [
+    "mention log"
+  ],
+  "ethics": "Stay on public/lawful sources only.",
+  "section": "surface-dark"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "google-dork-docs",
+  "title": "Document Dorking",
+  "category": "documents",
+  "level": "beginner",
+  "tags": [
+    "dorks",
+    "pdf",
+    "xlsx"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Find public documents related to an org or person.",
+  "objective": "Curated document hit list.",
+  "steps": [
+    "Craft filetype dorks with org/person constraints.",
+    "Open docs via browser; avoid malware traps.",
+    "Save URL + title + date.",
+    "Extract authors/company from properties if present.",
+    "Triage sensitive accidental exposures for disclosure."
+  ],
+  "queries": [
+    "site:example.com filetype:pdf",
+    "\"Company Name\" filetype:xlsx confidential",
+    "filetype:doc \"curriculum vitae\" \"Name\""
+  ],
+  "tools": [
+    "Google",
+    "Bing",
+    "DuckDuckGo"
+  ],
+  "outputs": [
+    "document index"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "documents"
+}

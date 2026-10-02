@@ -1,0 +1,12 @@
+{
+  "id": "geospatial",
+  "title": "Geospatial OSINT",
+  "description": "Maps, street-level cues, ship/aircraft public trackers and place verification.",
+  "skill_count": 4,
+  "skills": [
+    "maps-layer-recon",
+    "transport-trackers",
+    "street-sign-language",
+    "business-poi-verify"
+  ]
+}

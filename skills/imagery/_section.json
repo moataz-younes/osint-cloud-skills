@@ -1,0 +1,13 @@
+{
+  "id": "imagery",
+  "title": "Image & Media OSINT",
+  "description": "Reverse image search, EXIF, geolocation clues and media verification.",
+  "skill_count": 5,
+  "skills": [
+    "reverse-image-core",
+    "exif-geo-check",
+    "visual-geolocation",
+    "media-manipulation-clues",
+    "video-keyframe-osint"
+  ]
+}

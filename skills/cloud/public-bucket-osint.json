@@ -1,0 +1,40 @@
+{
+  "id": "public-bucket-osint",
+  "title": "Public Cloud Storage OSINT",
+  "category": "storage",
+  "level": "intermediate",
+  "tags": [
+    "s3",
+    "blob",
+    "gcs",
+    "leak-hunting"
+  ],
+  "providers": [
+    "aws",
+    "azure",
+    "gcp"
+  ],
+  "summary": "Find publicly listed cloud storage using open sources — not brute force.",
+  "objective": "Document public containers and disclose responsibly if sensitive.",
+  "steps": [
+    "Search engines for storage URLs tied to the org.",
+    "Prefer official open-data portals first.",
+    "Note naming patterns from public docs.",
+    "Capture URL, timestamp, sample filenames only.",
+    "Responsible disclosure if data looks sensitive."
+  ],
+  "queries": [
+    "site:s3.amazonaws.com company",
+    "site:blob.core.windows.net company",
+    "site:storage.googleapis.com company"
+  ],
+  "tools": [
+    "Google/Bing",
+    "archive.org"
+  ],
+  "outputs": [
+    "public URL evidence log"
+  ],
+  "ethics": "No unauthorized access or credential stuffing.",
+  "section": "cloud"
+}

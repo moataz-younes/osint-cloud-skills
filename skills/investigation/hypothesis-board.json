@@ -1,0 +1,33 @@
+{
+  "id": "hypothesis-board",
+  "title": "Hypothesis Board Method",
+  "category": "investigation",
+  "level": "intermediate",
+  "tags": [
+    "hypotheses",
+    "analysis",
+    "bias"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Track competing hypotheses to reduce tunnel vision.",
+  "objective": "Living hypothesis board.",
+  "steps": [
+    "Write 2–4 competing hypotheses.",
+    "List evidence for/against each.",
+    "Actively seek disconfirming data.",
+    "Retire weak hypotheses with reasons.",
+    "Export board into final report appendix."
+  ],
+  "queries": [],
+  "tools": [
+    "whiteboard/kanban",
+    "notes"
+  ],
+  "outputs": [
+    "hypothesis board"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "investigation"
+}

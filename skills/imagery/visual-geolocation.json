@@ -1,0 +1,34 @@
+{
+  "id": "visual-geolocation",
+  "title": "Visual Geolocation Skills",
+  "category": "imagery",
+  "level": "advanced",
+  "tags": [
+    "geolocation",
+    "landmarks",
+    "maps"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Estimate place from visual cues in photos/videos.",
+  "objective": "Candidate locations with confidence and rationale.",
+  "steps": [
+    "List visible landmarks, language, vegetation, road signs.",
+    "Use maps/street imagery to test hypotheses.",
+    "Measure shadows carefully if doing sun analysis.",
+    "Seek corroborating angles.",
+    "State uncertainty explicitly."
+  ],
+  "queries": [],
+  "tools": [
+    "Google Maps",
+    "OpenStreetMap",
+    "SunCalc"
+  ],
+  "outputs": [
+    "geo candidates"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "imagery"
+}

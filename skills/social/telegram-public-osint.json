@@ -1,0 +1,33 @@
+{
+  "id": "telegram-public-osint",
+  "title": "Telegram Public Channel OSINT",
+  "category": "social",
+  "level": "intermediate",
+  "tags": [
+    "telegram",
+    "channels",
+    "keywords"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Monitor public Telegram channels/posts relevant to a case.",
+  "objective": "Keyword hits with channel citations.",
+  "steps": [
+    "Identify public channels via search directories.",
+    "Define watch keywords (brand, incident, aliases).",
+    "Sample posts and preserve message links.",
+    "Note forward chains and overlapping stickers/aliases.",
+    "Stay within public content; no private group intrusion."
+  ],
+  "queries": [],
+  "tools": [
+    "Telegram search directories",
+    "manual review"
+  ],
+  "outputs": [
+    "channel hit log"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "social"
+}

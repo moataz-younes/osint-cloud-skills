@@ -1,0 +1,33 @@
+{
+  "id": "brand-keyword-alerts",
+  "title": "Brand Keyword Alerting",
+  "category": "monitoring",
+  "level": "beginner",
+  "tags": [
+    "alerts",
+    "brand",
+    "mentions"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Stand up lightweight public mention alerts.",
+  "objective": "Alert rules + triage SOP.",
+  "steps": [
+    "List brand, product, exec, domain strings.",
+    "Configure Google Alerts / similar.",
+    "Add paste/leak watch terms.",
+    "Define severity triage rubric.",
+    "Review weekly false positives."
+  ],
+  "queries": [],
+  "tools": [
+    "Google Alerts",
+    "RSS"
+  ],
+  "outputs": [
+    "alert SOP"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "monitoring"
+}

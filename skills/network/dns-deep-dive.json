@@ -1,0 +1,37 @@
+{
+  "id": "dns-deep-dive",
+  "title": "DNS Deep Dive",
+  "category": "network",
+  "level": "beginner",
+  "tags": [
+    "dns",
+    "records",
+    "history"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Collect and interpret public DNS records for investigation context.",
+  "objective": "DNS evidence pack with historical notes.",
+  "steps": [
+    "Query A/AAAA/MX/TXT/NS/CNAME/SRV.",
+    "Capture SPF/DKIM/DMARC.",
+    "Check passive DNS history if available.",
+    "Map mail and verification vendors.",
+    "Store raw answers with resolver/time."
+  ],
+  "queries": [
+    "dig ANY example.com (where allowed)",
+    "dig TXT example.com"
+  ],
+  "tools": [
+    "dig",
+    "SecurityTrails",
+    "ViewDNS"
+  ],
+  "outputs": [
+    "DNS pack"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "network"
+}

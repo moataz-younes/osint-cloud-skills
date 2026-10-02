@@ -1,0 +1,36 @@
+{
+  "id": "username-pivot",
+  "title": "Username Cross-Platform Pivot",
+  "category": "identity",
+  "level": "beginner",
+  "tags": [
+    "username",
+    "alias",
+    "footprint"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Track a handle across platforms and naming patterns.",
+  "objective": "List probable same-handle accounts and variants.",
+  "steps": [
+    "Collect seed username + known variants.",
+    "Check major platforms and niche forums.",
+    "Note creation clues, bio overlaps, avatar reuse.",
+    "Graph connections between confirmed accounts.",
+    "Mark low-confidence hits clearly."
+  ],
+  "queries": [
+    "username site:twitter.com OR site:github.com OR site:reddit.com"
+  ],
+  "tools": [
+    "osint-footprint",
+    "WhatsMyName style lists",
+    "search engines"
+  ],
+  "outputs": [
+    "username map"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "people"
+}

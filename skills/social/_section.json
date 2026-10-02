@@ -1,0 +1,14 @@
+{
+  "id": "social",
+  "title": "Social Media OSINT",
+  "description": "Platform pivoting, sockpuppet detection signals, and timeline reconstruction.",
+  "skill_count": 6,
+  "skills": [
+    "social-timeline",
+    "sockpuppet-signals",
+    "telegram-public-osint",
+    "linkedin-org-map",
+    "hashtag-campaign-track",
+    "profile-photo-reuse"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "phone-osint-lite",
+  "title": "Phone Number Public OSINT",
+  "category": "identity",
+  "level": "intermediate",
+  "tags": [
+    "phone",
+    "messaging",
+    "directories"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Limited public checks on phone numbers without intrusive lookups.",
+  "objective": "Document public associations only.",
+  "steps": [
+    "Normalize to E.164 format.",
+    "Search quoted number variants on the web.",
+    "Check messaging profile presence only where public/legal.",
+    "Correlate classifieds/business listings.",
+    "Avoid paid skip-tracing abuse and harassment."
+  ],
+  "queries": [
+    "\"+2010...\"",
+    "\"0XX XXX XXXX\" company"
+  ],
+  "tools": [
+    "search engines",
+    "business directories"
+  ],
+  "outputs": [
+    "phone notes"
+  ],
+  "ethics": "Respect privacy laws and anti-harassment rules.",
+  "section": "people"
+}

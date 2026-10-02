@@ -1,0 +1,33 @@
+{
+  "id": "sockpuppet-signals",
+  "title": "Sockpuppet / Alt Account Signals",
+  "category": "social",
+  "level": "advanced",
+  "tags": [
+    "sockpuppet",
+    "behavior",
+    "graph"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Spot weak signals that accounts may be linked — carefully and non-conclusively.",
+  "objective": "Hypothesis list of linked accounts with confidence scores.",
+  "steps": [
+    "Compare usernames, avatars, writing style, posting hours.",
+    "Check mutual unique contacts/hashtags.",
+    "Look for recycled cover photos via reverse image search.",
+    "Avoid definitive accusations without corroboration.",
+    "Document alternative explanations."
+  ],
+  "queries": [],
+  "tools": [
+    "reverse image search",
+    "manual comparison sheet"
+  ],
+  "outputs": [
+    "link hypotheses"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "social"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "cdn-origin-clues",
+  "title": "CDN vs Origin Clues",
+  "category": "network",
+  "level": "intermediate",
+  "tags": [
+    "cdn",
+    "origin",
+    "headers"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Distinguish edge CDN from origin hints on public sites.",
+  "objective": "Edge/origin hypothesis notes.",
+  "steps": [
+    "Inspect CNAME chains.",
+    "Compare headers across regions if authorized.",
+    "Look for origin hostnames in JS/error pages.",
+    "Check historical DNS for pre-CDN records.",
+    "Document carefully — avoid aggressive probing."
+  ],
+  "queries": [],
+  "tools": [
+    "dig",
+    "curl",
+    "Wayback"
+  ],
+  "outputs": [
+    "edge/origin notes"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "network"
+}

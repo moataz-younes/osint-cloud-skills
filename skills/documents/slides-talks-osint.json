@@ -1,0 +1,37 @@
+{
+  "id": "slides-talks-osint",
+  "title": "Slides & Conference Talk OSINT",
+  "category": "documents",
+  "level": "beginner",
+  "tags": [
+    "slides",
+    "talks",
+    "speakers"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Mine public slide decks for org tech and people clues.",
+  "objective": "Talk/deck inventory with key claims.",
+  "steps": [
+    "Search SpeakerDeck/SlideShare/YouTube titles.",
+    "Note authors, dates, tech stacks mentioned.",
+    "Extract architecture diagrams as hypotheses only.",
+    "Correlate speakers to LinkedIn roles.",
+    "Save citations."
+  ],
+  "queries": [
+    "site:speakerdeck.com company",
+    "site:slideshare.net \"Company\" security"
+  ],
+  "tools": [
+    "SpeakerDeck",
+    "SlideShare",
+    "YouTube"
+  ],
+  "outputs": [
+    "talks inventory"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "documents"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "exif-geo-check",
+  "title": "EXIF & Embedded Geo Check",
+  "category": "imagery",
+  "level": "beginner",
+  "tags": [
+    "exif",
+    "gps",
+    "camera"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Read embedded metadata for camera/GPS clues when present.",
+  "objective": "EXIF summary and map pin if GPS exists.",
+  "steps": [
+    "Extract metadata with exiftool.",
+    "Verify whether GPS fields exist (often stripped).",
+    "Note device model and software.",
+    "Never assume EXIF is truthful — can be edited.",
+    "Correlate with visual geolocation separately."
+  ],
+  "queries": [],
+  "tools": [
+    "exiftool"
+  ],
+  "outputs": [
+    "EXIF summary"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "imagery"
+}

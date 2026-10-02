@@ -1,0 +1,13 @@
+{
+  "id": "documents",
+  "title": "Documents & Files",
+  "description": "Metadata, document dorking, version trails and file fingerprint OSINT.",
+  "skill_count": 5,
+  "skills": [
+    "google-dork-docs",
+    "metadata-extraction",
+    "version-diff-docs",
+    "paste-doc-fragments",
+    "slides-talks-osint"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "vendor-status-watch",
+  "title": "Cloud Vendor Status Watch",
+  "category": "monitoring",
+  "level": "beginner",
+  "tags": [
+    "status",
+    "aws",
+    "azure",
+    "gcp"
+  ],
+  "providers": [
+    "aws",
+    "azure",
+    "gcp",
+    "generic"
+  ],
+  "summary": "Correlate incidents with hyperscaler status pages.",
+  "objective": "Status correlation notes for IR.",
+  "steps": [
+    "Bookmark AWS/Azure/GCP/Cloudflare status.",
+    "At incident start, capture status snapshots.",
+    "Note region/service overlaps.",
+    "Separate vendor outage from targeted attack hypotheses.",
+    "Attach screenshots to timeline."
+  ],
+  "queries": [],
+  "tools": [
+    "official status pages"
+  ],
+  "outputs": [
+    "status correlation"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "monitoring"
+}

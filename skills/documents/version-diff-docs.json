@@ -1,0 +1,33 @@
+{
+  "id": "version-diff-docs",
+  "title": "Document Version Diffing",
+  "category": "documents",
+  "level": "intermediate",
+  "tags": [
+    "versions",
+    "diff",
+    "leak"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Compare public document versions for changed claims.",
+  "objective": "Diff summary of material changes.",
+  "steps": [
+    "Collect multiple versions (site + archives).",
+    "Convert to text safely.",
+    "Diff and highlight policy/financial/personnel changes.",
+    "Cite both version URLs.",
+    "Ignore cosmetic diffs."
+  ],
+  "queries": [],
+  "tools": [
+    "Wayback",
+    "diff tools"
+  ],
+  "outputs": [
+    "version diff brief"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "documents"
+}

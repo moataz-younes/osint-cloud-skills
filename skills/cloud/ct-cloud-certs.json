@@ -1,0 +1,38 @@
+{
+  "id": "ct-cloud-certs",
+  "title": "Certificate Transparency for Cloud Hosts",
+  "category": "discovery",
+  "level": "beginner",
+  "tags": [
+    "tls",
+    "crt.sh",
+    "subdomains"
+  ],
+  "providers": [
+    "aws",
+    "azure",
+    "gcp",
+    "generic"
+  ],
+  "summary": "Use CT logs to find cloud hostnames and SaaS endpoints.",
+  "objective": "Discover staging/api/cdn hostnames from public certificates.",
+  "steps": [
+    "Query crt.sh for %.target-domain.com.",
+    "Export unique CNs and SANs.",
+    "Filter cloud keywords: s3, blob, cloudfront, azure, appspot, vercel.",
+    "Group by env hints: staging, dev, uat, api.",
+    "Validate live hosts only when authorized."
+  ],
+  "queries": [
+    "%.example.com"
+  ],
+  "tools": [
+    "crt.sh",
+    "Certspotter"
+  ],
+  "outputs": [
+    "hostname list"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "cloud"
+}

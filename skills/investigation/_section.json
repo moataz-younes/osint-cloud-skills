@@ -1,0 +1,14 @@
+{
+  "id": "investigation",
+  "title": "Investigation Workflow",
+  "description": "Casefile method, evidence handling, reporting and hypothesis tracking.",
+  "skill_count": 6,
+  "skills": [
+    "casefile-setup",
+    "source-grading",
+    "hypothesis-board",
+    "evidence-preservation",
+    "osint-report-structure",
+    "cloud-incident-osint"
+  ]
+}

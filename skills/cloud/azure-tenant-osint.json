@@ -1,0 +1,35 @@
+{
+  "id": "azure-tenant-osint",
+  "title": "Azure / M365 Tenant OSINT",
+  "category": "identity",
+  "level": "intermediate",
+  "tags": [
+    "aad",
+    "m365",
+    "federation"
+  ],
+  "providers": [
+    "azure"
+  ],
+  "summary": "Public Microsoft endpoints for tenant/federation clues.",
+  "objective": "Identify tenant/federation status without authenticated access.",
+  "steps": [
+    "Start from known email domains.",
+    "Use public realm discovery endpoints.",
+    "Note managed vs federated + IdP hints.",
+    "Correlate Autodiscover CNAMEs and DNS TXT.",
+    "Add to identity topology notes."
+  ],
+  "queries": [
+    "getuserrealm Domain=example.com"
+  ],
+  "tools": [
+    "curl",
+    "browser"
+  ],
+  "outputs": [
+    "tenant notes"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "cloud"
+}

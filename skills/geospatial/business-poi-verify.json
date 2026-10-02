@@ -1,0 +1,36 @@
+{
+  "id": "business-poi-verify",
+  "title": "Business POI Verification",
+  "category": "geospatial",
+  "level": "beginner",
+  "tags": [
+    "poi",
+    "business",
+    "address"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Verify whether a claimed business address looks real.",
+  "objective": "Address verification notes.",
+  "steps": [
+    "Find address on maps and registries.",
+    "Check street view recency.",
+    "Look for matching signage/photos.",
+    "Compare phone/website consistency.",
+    "Flag virtual-office patterns."
+  ],
+  "queries": [
+    "\"Company\" \"Street Name\"",
+    "company site contact page"
+  ],
+  "tools": [
+    "maps",
+    "business registries"
+  ],
+  "outputs": [
+    "address verification"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "geospatial"
+}

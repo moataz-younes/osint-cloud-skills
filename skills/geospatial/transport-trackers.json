@@ -1,0 +1,34 @@
+{
+  "id": "transport-trackers",
+  "title": "Public Transport Trackers",
+  "category": "geospatial",
+  "level": "intermediate",
+  "tags": [
+    "adsb",
+    "ais",
+    "flights",
+    "ships"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Use public flight/ship trackers for open movement context.",
+  "objective": "Track excerpts with timestamps.",
+  "steps": [
+    "Identify callsigns/MMSI from public claims.",
+    "Query public tracker sites.",
+    "Export route segments relevant to timeframe.",
+    "Correlate with weather/port/airport notices.",
+    "Treat as open-source context, not sole proof."
+  ],
+  "queries": [],
+  "tools": [
+    "ADS-B public sites",
+    "AIS public sites"
+  ],
+  "outputs": [
+    "track excerpt"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "geospatial"
+}

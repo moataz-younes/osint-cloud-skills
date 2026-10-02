@@ -1,0 +1,35 @@
+{
+  "id": "domain-watch",
+  "title": "Domain Lookalike Watch",
+  "category": "monitoring",
+  "level": "intermediate",
+  "tags": [
+    "domains",
+    "typosquat",
+    "phishing"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Watch for suspicious lookalike domains.",
+  "objective": "Candidate domain list with risk tags.",
+  "steps": [
+    "Generate typo/bit-squatting patterns.",
+    "Monitor new TLS issuances via CT.",
+    "Check DNS activity on candidates.",
+    "Screenshot active phishing-looking sites.",
+    "Report to registrar/host when confirmed."
+  ],
+  "queries": [
+    "%.brand-example.com via CT tools"
+  ],
+  "tools": [
+    "crt.sh",
+    "DNS checks"
+  ],
+  "outputs": [
+    "lookalike watchlist"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "monitoring"
+}

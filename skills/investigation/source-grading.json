@@ -1,0 +1,32 @@
+{
+  "id": "source-grading",
+  "title": "Source Reliability Grading",
+  "category": "investigation",
+  "level": "intermediate",
+  "tags": [
+    "sources",
+    "confidence",
+    "analytic"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Grade sources so reports stay honest.",
+  "objective": "Sources table with reliability scores.",
+  "steps": [
+    "Capture URL, author, date, retrieval time.",
+    "Score reliability vs credibility separately.",
+    "Prefer primary over secondary.",
+    "Mark anonymous claims as unverified.",
+    "Update grades when corroborated."
+  ],
+  "queries": [],
+  "tools": [
+    "source log template"
+  ],
+  "outputs": [
+    "graded sources"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "investigation"
+}

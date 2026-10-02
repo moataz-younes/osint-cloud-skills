@@ -1,0 +1,33 @@
+{
+  "id": "cert-change-monitor",
+  "title": "Certificate Change Monitor",
+  "category": "monitoring",
+  "level": "intermediate",
+  "tags": [
+    "tls",
+    "monitoring",
+    "ct"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Alert on unexpected certificates for your domains.",
+  "objective": "CT watch configuration notes.",
+  "steps": [
+    "List domains/wildcards in scope.",
+    "Subscribe to CT alert services.",
+    "Baseline expected CAs.",
+    "Investigate unknown issuers quickly.",
+    "Coordinate with IT for rogue cert response."
+  ],
+  "queries": [],
+  "tools": [
+    "Cert Spotter",
+    "crt.sh monitors"
+  ],
+  "outputs": [
+    "CT watch config"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "monitoring"
+}

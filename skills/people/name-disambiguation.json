@@ -1,0 +1,35 @@
+{
+  "id": "name-disambiguation",
+  "title": "Person Name Disambiguation",
+  "category": "identity",
+  "level": "beginner",
+  "tags": [
+    "names",
+    "entity-resolution"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Separate same-name individuals using strong identifiers.",
+  "objective": "High-confidence identity clusters.",
+  "steps": [
+    "Collect middle names, cities, employers, education.",
+    "Build exclusion criteria for unrelated people.",
+    "Prefer unique combos: name+employer+city.",
+    "Use images carefully with reverse search.",
+    "Never merge identities without two strong links."
+  ],
+  "queries": [
+    "\"Full Name\" \"Company\"",
+    "\"Full Name\" \"University\""
+  ],
+  "tools": [
+    "search engines",
+    "news archives"
+  ],
+  "outputs": [
+    "identity clusters"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "people"
+}

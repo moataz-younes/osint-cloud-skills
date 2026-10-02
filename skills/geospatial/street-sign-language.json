@@ -1,0 +1,33 @@
+{
+  "id": "street-sign-language",
+  "title": "Street Sign & Language Cues",
+  "category": "geospatial",
+  "level": "intermediate",
+  "tags": [
+    "signs",
+    "language",
+    "region"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Regionally narrow locations using language and signage norms.",
+  "objective": "Region shortlist with cue list.",
+  "steps": [
+    "Transcribe signs exactly.",
+    "Identify script/language variants.",
+    "Note driving side, plate styles, architecture.",
+    "Cross-check with map label languages.",
+    "Keep a cue→inference log."
+  ],
+  "queries": [],
+  "tools": [
+    "maps",
+    "translation tools"
+  ],
+  "outputs": [
+    "region shortlist"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "geospatial"
+}

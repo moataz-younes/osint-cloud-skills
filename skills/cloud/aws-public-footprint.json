@@ -1,0 +1,36 @@
+{
+  "id": "aws-public-footprint",
+  "title": "AWS Public Footprint Clues",
+  "category": "provider",
+  "level": "intermediate",
+  "tags": [
+    "aws",
+    "cloudfront",
+    "s3"
+  ],
+  "providers": [
+    "aws"
+  ],
+  "summary": "Recognize public AWS host patterns linked to an org.",
+  "objective": "List likely AWS-hosted assets from open sources.",
+  "steps": [
+    "Search CloudFront/S3 website endpoints mentioning the brand.",
+    "Inspect public asset URLs for amazonaws/cloudfront.",
+    "Mine blogs/jobs for region/service mentions.",
+    "Correlate api/cdn/static/media subdomains.",
+    "Evidence table: URL, service guess, first-seen."
+  ],
+  "queries": [
+    "site:cloudfront.net company",
+    "site:s3.amazonaws.com company"
+  ],
+  "tools": [
+    "crt.sh",
+    "Wappalyzer"
+  ],
+  "outputs": [
+    "AWS asset candidates"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "cloud"
+}

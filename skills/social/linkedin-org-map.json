@@ -1,0 +1,35 @@
+{
+  "id": "linkedin-org-map",
+  "title": "LinkedIn Organization Mapping",
+  "category": "social",
+  "level": "beginner",
+  "tags": [
+    "linkedin",
+    "employees",
+    "orgchart"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Map public employee roles and org structure hints.",
+  "objective": "Lightweight org chart from public profiles.",
+  "steps": [
+    "Start from company page and people samples.",
+    "Group by department/title keywords.",
+    "Note join dates and location clusters.",
+    "Find conference speakers overlapping staff.",
+    "Respect platform ToS and scraping limits."
+  ],
+  "queries": [
+    "site:linkedin.com/in \"Company\" \"Security\""
+  ],
+  "tools": [
+    "LinkedIn",
+    "search engines"
+  ],
+  "outputs": [
+    "org sketch"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "social"
+}

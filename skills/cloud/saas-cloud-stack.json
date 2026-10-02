@@ -1,0 +1,35 @@
+{
+  "id": "saas-cloud-stack",
+  "title": "SaaS & Cloud Stack Fingerprinting",
+  "category": "reconnaissance",
+  "level": "beginner",
+  "tags": [
+    "saas",
+    "cdn",
+    "auth"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Identify cloud SaaS building blocks from public site signals.",
+  "objective": "Quick stack card: CDN, auth, hosting, analytics.",
+  "steps": [
+    "Inspect HTML/JS for vendor scripts.",
+    "Check headers/cookies on public pages.",
+    "Confirm with public tech profilers.",
+    "Map auth vendors (Okta/Auth0/Cognito/AAD B2C).",
+    "Summarize defensive attack-surface categories."
+  ],
+  "queries": [
+    "site:company.com (Okta OR Auth0 OR Cloudflare)"
+  ],
+  "tools": [
+    "Wappalyzer",
+    "BuiltWith"
+  ],
+  "outputs": [
+    "stack card"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "cloud"
+}

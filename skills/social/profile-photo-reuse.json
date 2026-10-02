@@ -1,0 +1,34 @@
+{
+  "id": "profile-photo-reuse",
+  "title": "Profile Photo Reuse Detection",
+  "category": "social",
+  "level": "beginner",
+  "tags": [
+    "avatar",
+    "reverse-image",
+    "fraud"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Find reused or stock avatars across identities.",
+  "objective": "List of platforms sharing the same image.",
+  "steps": [
+    "Save profile image locally.",
+    "Run reverse image search engines.",
+    "Note stock-photo hits vs unique photos.",
+    "Compare crop/compression differences.",
+    "Log URLs and first-seen dates."
+  ],
+  "queries": [],
+  "tools": [
+    "Google Images",
+    "Yandex",
+    "TinEye"
+  ],
+  "outputs": [
+    "photo reuse log"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "social"
+}

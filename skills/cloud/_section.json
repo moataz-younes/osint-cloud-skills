@@ -1,0 +1,16 @@
+{
+  "id": "cloud",
+  "title": "Cloud OSINT",
+  "description": "AWS, Azure, GCP, SaaS and public cloud footprint investigation.",
+  "skill_count": 8,
+  "skills": [
+    "cloud-org-recon",
+    "ct-cloud-certs",
+    "public-bucket-osint",
+    "github-cloud-osint",
+    "azure-tenant-osint",
+    "aws-public-footprint",
+    "gcp-public-footprint",
+    "saas-cloud-stack"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "hashtag-campaign-track",
+  "title": "Hashtag & Campaign Tracking",
+  "category": "social",
+  "level": "beginner",
+  "tags": [
+    "hashtags",
+    "influence",
+    "narratives"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Track narrative spread around hashtags or incident keywords.",
+  "objective": "Narrative map with peak times and amplifiers.",
+  "steps": [
+    "Define seed hashtags/keywords.",
+    "Sample high-engagement posts.",
+    "Identify amplifiers vs originators.",
+    "Watch for copy-paste campaigns.",
+    "Export daily volume notes."
+  ],
+  "queries": [],
+  "tools": [
+    "platform search",
+    "export sheets"
+  ],
+  "outputs": [
+    "narrative map"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "social"
+}

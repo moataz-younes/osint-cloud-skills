@@ -1,0 +1,33 @@
+{
+  "id": "ransomware-note-osint",
+  "title": "Ransomware Note Public OSINT",
+  "category": "surface-dark",
+  "level": "advanced",
+  "tags": [
+    "ransomware",
+    "notes",
+    "victims"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Analyze publicly posted ransomware notes/claims for context.",
+  "objective": "Actor/claim summary with citations.",
+  "steps": [
+    "Collect public note samples from trusted reports.",
+    "Extract TTPs, contact methods, victim naming patterns.",
+    "Correlate with status/outage and press.",
+    "Avoid amplifying untouched victim data.",
+    "Share only with authorized stakeholders."
+  ],
+  "queries": [],
+  "tools": [
+    "vendor blogs",
+    "trusted TI"
+  ],
+  "outputs": [
+    "actor/claim summary"
+  ],
+  "ethics": "Handle victim data carefully; lawful defensive use only.",
+  "section": "surface-dark"
+}

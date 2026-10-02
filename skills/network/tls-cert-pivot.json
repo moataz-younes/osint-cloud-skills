@@ -1,0 +1,33 @@
+{
+  "id": "tls-cert-pivot",
+  "title": "TLS Certificate Pivoting",
+  "category": "network",
+  "level": "intermediate",
+  "tags": [
+    "tls",
+    "ssl",
+    "pivot"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Pivot across hosts sharing certificate subjects/SANs.",
+  "objective": "Host clusters linked by certificates.",
+  "steps": [
+    "Collect live cert or CT entries.",
+    "Extract SANs and organization fields.",
+    "Search CT for shared unique SANs.",
+    "Graph hosts per certificate.",
+    "Watch for typosquat lookalikes."
+  ],
+  "queries": [],
+  "tools": [
+    "crt.sh",
+    "openssl s_client"
+  ],
+  "outputs": [
+    "cert clusters"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "network"
+}

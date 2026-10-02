@@ -1,0 +1,39 @@
+{
+  "id": "github-cloud-osint",
+  "title": "GitHub Cloud Config OSINT",
+  "category": "code-osint",
+  "level": "intermediate",
+  "tags": [
+    "github",
+    "terraform",
+    "secrets"
+  ],
+  "providers": [
+    "aws",
+    "azure",
+    "gcp",
+    "generic"
+  ],
+  "summary": "Public code clues for cloud architecture and accidental exposures.",
+  "objective": "Map stack and detect leaked config patterns in public repos.",
+  "steps": [
+    "Search Terraform/CloudFormation/Bicep/Pulumi files.",
+    "Note account IDs, regions, bucket names in public code.",
+    "Watch for secret-like strings; never abuse them.",
+    "Notify owners / recommend rotation if real secrets appear.",
+    "Document serverless/k8s/CDN choices."
+  ],
+  "queries": [
+    "org:ORG terraform aws_s3_bucket",
+    "\"AKIA\" companyName"
+  ],
+  "tools": [
+    "GitHub Code Search",
+    "gitleaks (authorized)"
+  ],
+  "outputs": [
+    "stack profile"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "cloud"
+}

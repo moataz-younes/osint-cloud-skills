@@ -1,0 +1,14 @@
+{
+  "id": "people",
+  "title": "People & Identity",
+  "description": "Person-centric OSINT: names, emails, usernames, resumes, public records.",
+  "skill_count": 6,
+  "skills": [
+    "email-pivot",
+    "username-pivot",
+    "resume-career-osint",
+    "phone-osint-lite",
+    "name-disambiguation",
+    "breach-surface-check"
+  ]
+}

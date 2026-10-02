@@ -1,0 +1,37 @@
+{
+  "id": "resume-career-osint",
+  "title": "Resume & Career Trail OSINT",
+  "category": "identity",
+  "level": "intermediate",
+  "tags": [
+    "cv",
+    "linkedin",
+    "jobs"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Reconstruct career timeline from public CVs and job posts.",
+  "objective": "Verified employment/education timeline with sources.",
+  "steps": [
+    "Gather LinkedIn/public CV/portfolio links.",
+    "Cross-check company sites and press mentions.",
+    "Note role titles, dates, locations, skills claimed.",
+    "Find talks/podcasts/GitHub that corroborate skills.",
+    "Flag inconsistencies for follow-up."
+  ],
+  "queries": [
+    "\"First Last\" (CV OR resume OR curriculum)",
+    "\"First Last\" site:linkedin.com"
+  ],
+  "tools": [
+    "LinkedIn",
+    "Google",
+    "company sites"
+  ],
+  "outputs": [
+    "career timeline"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "people"
+}

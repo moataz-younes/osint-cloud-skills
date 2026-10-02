@@ -1,0 +1,33 @@
+{
+  "id": "video-keyframe-osint",
+  "title": "Video Keyframe OSINT",
+  "category": "imagery",
+  "level": "intermediate",
+  "tags": [
+    "video",
+    "keyframes",
+    "context"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Break videos into keyframes for search and geolocation.",
+  "objective": "Keyframe set with notes.",
+  "steps": [
+    "Hash original video.",
+    "Extract informative keyframes.",
+    "Reverse-search key frames.",
+    "Transcribe visible text/signage.",
+    "Build scene timeline."
+  ],
+  "queries": [],
+  "tools": [
+    "ffmpeg",
+    "reverse image tools"
+  ],
+  "outputs": [
+    "keyframe pack"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "imagery"
+}

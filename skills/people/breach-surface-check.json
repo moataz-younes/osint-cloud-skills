@@ -1,0 +1,33 @@
+{
+  "id": "breach-surface-check",
+  "title": "Breach Surface Check (Lawful)",
+  "category": "identity",
+  "level": "beginner",
+  "tags": [
+    "breaches",
+    "credentials",
+    "monitoring"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Check whether emails/domains appear in known breach corpora via lawful APIs.",
+  "objective": "Exposure status for owned or authorized identities.",
+  "steps": [
+    "Confirm authorization (own account/domain/client).",
+    "Query reputable breach notification services.",
+    "Triage password reuse risk qualitatively.",
+    "Recommend rotation/MFA hardening.",
+    "Log ticket IDs for IR follow-up."
+  ],
+  "queries": [],
+  "tools": [
+    "Have I Been Pwned",
+    "vendor dark-web monitors"
+  ],
+  "outputs": [
+    "exposure report"
+  ],
+  "ethics": "Only for identities/domains you are authorized to monitor.",
+  "section": "people"
+}

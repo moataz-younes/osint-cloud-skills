@@ -1,0 +1,40 @@
+{
+  "id": "cloud-org-recon",
+  "title": "Cloud Organization Recon",
+  "category": "reconnaissance",
+  "level": "beginner",
+  "tags": [
+    "company",
+    "domains",
+    "asn"
+  ],
+  "providers": [
+    "aws",
+    "azure",
+    "gcp",
+    "generic"
+  ],
+  "summary": "Map an organization's public cloud footprint from domains and official pages.",
+  "objective": "Starter inventory of cloud-related domains and services.",
+  "steps": [
+    "Collect official domains from website, press, LinkedIn.",
+    "WHOIS/RDAP on primary domains.",
+    "Identify ASN/IP ranges via public BGP sources.",
+    "Pull subdomains from Certificate Transparency.",
+    "Tag by provider patterns (amazonaws, azurewebsites, appspot...)."
+  ],
+  "queries": [
+    "site:company.com (AWS OR Azure OR GCP OR cloud)"
+  ],
+  "tools": [
+    "crt.sh",
+    "WHOIS/RDAP",
+    "SecurityTrails"
+  ],
+  "outputs": [
+    "domain inventory",
+    "provider map"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "cloud"
+}

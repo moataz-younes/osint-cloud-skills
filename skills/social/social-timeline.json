@@ -1,0 +1,33 @@
+{
+  "id": "social-timeline",
+  "title": "Social Timeline Reconstruction",
+  "category": "social",
+  "level": "intermediate",
+  "tags": [
+    "timeline",
+    "posts",
+    "activity"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Rebuild activity timelines from public posts.",
+  "objective": "Chronological event board with citations.",
+  "steps": [
+    "Identify primary platforms in scope.",
+    "Export/save public posts with timestamps/URLs.",
+    "Normalize timezone and capture edits if visible.",
+    "Cluster by themes/locations/people tagged.",
+    "Produce a timeline sheet for the casefile."
+  ],
+  "queries": [],
+  "tools": [
+    "native platform search",
+    "export tools (ToS-compliant)"
+  ],
+  "outputs": [
+    "timeline sheet"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "social"
+}

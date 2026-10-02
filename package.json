@@ -1,0 +1,29 @@
+{
+  "name": "osint-cloud-skills",
+  "version": "2.0.0",
+  "description": "Multi-section OSINT skills library for cloud and broader investigations",
+  "type": "module",
+  "bin": {
+    "osint-skills": "./cli/osint_skills.mjs"
+  },
+  "scripts": {
+    "skills": "node cli/osint_skills.mjs",
+    "sections": "node cli/osint_skills.mjs sections",
+    "list": "node cli/osint_skills.mjs list"
+  },
+  "keywords": [
+    "osint",
+    "cloud",
+    "cybersecurity",
+    "investigation",
+    "skills",
+    "aws",
+    "azure",
+    "gcp"
+  ],
+  "author": "Moataz Younes",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}

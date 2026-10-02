@@ -1,0 +1,39 @@
+{
+  "id": "cloud-leak-monitoring",
+  "title": "Cloud Leak & Paste Monitoring",
+  "category": "monitoring",
+  "level": "beginner",
+  "tags": [
+    "pastes",
+    "leaks",
+    "cloud"
+  ],
+  "providers": [
+    "generic",
+    "aws",
+    "azure",
+    "gcp"
+  ],
+  "summary": "Monitor public pastes for cloud secret patterns tied to your brand.",
+  "objective": "Alert playbook + timeline.",
+  "steps": [
+    "Define watch terms and unique prefixes.",
+    "Track paste/leak feeds you are allowed to use.",
+    "Triage false positives.",
+    "If confirmed, start rotation checklist.",
+    "Record first public sighting."
+  ],
+  "queries": [
+    "\"AKIA\" companyDomain",
+    "\"blob.core.windows.net\" company"
+  ],
+  "tools": [
+    "paste monitors",
+    "HIBP domains you own"
+  ],
+  "outputs": [
+    "alert playbook"
+  ],
+  "ethics": "Monitor brands you own or are contracted to protect.",
+  "section": "monitoring"
+}

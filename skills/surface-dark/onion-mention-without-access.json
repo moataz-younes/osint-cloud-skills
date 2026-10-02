@@ -1,0 +1,36 @@
+{
+  "id": "onion-mention-without-access",
+  "title": "Onion Mentions Without Access",
+  "category": "surface-dark",
+  "level": "intermediate",
+  "tags": [
+    "onion",
+    "mentions",
+    "surface"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Find references to .onion URLs on the clear web without browsing illicit sites.",
+  "objective": "Clear-web onion reference list.",
+  "steps": [
+    "Search clear web for .onion strings + brand.",
+    "Treat links as hazardous; do not open indiscriminately.",
+    "Prefer screenshots from trusted intel reports.",
+    "Log references for awareness.",
+    "Escalate to specialized units if needed."
+  ],
+  "queries": [
+    "\"company\" \".onion\"",
+    "company site:.onion (clear-web mentions)"
+  ],
+  "tools": [
+    "search engines",
+    "intel reports"
+  ],
+  "outputs": [
+    "onion reference list"
+  ],
+  "ethics": "Do not provide or seek access guidance to illegal services.",
+  "section": "surface-dark"
+}

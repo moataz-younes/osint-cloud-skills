@@ -1,0 +1,14 @@
+{
+  "id": "network",
+  "title": "Network & Infrastructure",
+  "description": "DNS, IP, ASN, TLS, CDN and hosting reconnaissance from public sources.",
+  "skill_count": 6,
+  "skills": [
+    "dns-deep-dive",
+    "asn-ip-ownership",
+    "tls-cert-pivot",
+    "cdn-origin-clues",
+    "mail-infra-osint",
+    "subdomain-passive"
+  ]
+}

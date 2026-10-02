@@ -1,0 +1,13 @@
+{
+  "id": "monitoring",
+  "title": "Monitoring & Alerts",
+  "description": "Brand, leak, domain and keyword monitoring playbooks.",
+  "skill_count": 5,
+  "skills": [
+    "brand-keyword-alerts",
+    "domain-watch",
+    "cloud-leak-monitoring",
+    "cert-change-monitor",
+    "vendor-status-watch"
+  ]
+}

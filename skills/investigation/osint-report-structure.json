@@ -1,0 +1,32 @@
+{
+  "id": "osint-report-structure",
+  "title": "OSINT Report Structure",
+  "category": "investigation",
+  "level": "beginner",
+  "tags": [
+    "reporting",
+    "writing",
+    "deliverable"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Produce a clear, defensible OSINT report.",
+  "objective": "Report draft outline filled.",
+  "steps": [
+    "Executive summary with key findings only.",
+    "Scope, method, limitations.",
+    "Findings with citations.",
+    "Uncertainties and alternatives.",
+    "Recommendations / next steps."
+  ],
+  "queries": [],
+  "tools": [
+    "markdown/doc templates"
+  ],
+  "outputs": [
+    "report draft"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "investigation"
+}

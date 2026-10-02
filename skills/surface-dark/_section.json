@@ -1,0 +1,12 @@
+{
+  "id": "surface-dark",
+  "title": "Surface & Dark-Web Edge",
+  "description": "Public paste/forum/market *mentions* monitoring — no illicit access guidance.",
+  "skill_count": 4,
+  "skills": [
+    "public-forum-mentions",
+    "marketplace-claim-watch",
+    "onion-mention-without-access",
+    "ransomware-note-osint"
+  ]
+}

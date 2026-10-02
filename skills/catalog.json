@@ -1,0 +1,77 @@
+{
+  "name": "OSINT Skills Library",
+  "version": "2.0.0",
+  "sections": [
+    {
+      "id": "cloud",
+      "title": "Cloud OSINT",
+      "description": "AWS, Azure, GCP, SaaS and public cloud footprint investigation.",
+      "path": "skills/cloud",
+      "skill_count": 8
+    },
+    {
+      "id": "people",
+      "title": "People & Identity",
+      "description": "Person-centric OSINT: names, emails, usernames, resumes, public records.",
+      "path": "skills/people",
+      "skill_count": 6
+    },
+    {
+      "id": "social",
+      "title": "Social Media OSINT",
+      "description": "Platform pivoting, sockpuppet detection signals, and timeline reconstruction.",
+      "path": "skills/social",
+      "skill_count": 6
+    },
+    {
+      "id": "network",
+      "title": "Network & Infrastructure",
+      "description": "DNS, IP, ASN, TLS, CDN and hosting reconnaissance from public sources.",
+      "path": "skills/network",
+      "skill_count": 6
+    },
+    {
+      "id": "documents",
+      "title": "Documents & Files",
+      "description": "Metadata, document dorking, version trails and file fingerprint OSINT.",
+      "path": "skills/documents",
+      "skill_count": 5
+    },
+    {
+      "id": "imagery",
+      "title": "Image & Media OSINT",
+      "description": "Reverse image search, EXIF, geolocation clues and media verification.",
+      "path": "skills/imagery",
+      "skill_count": 5
+    },
+    {
+      "id": "geospatial",
+      "title": "Geospatial OSINT",
+      "description": "Maps, street-level cues, ship/aircraft public trackers and place verification.",
+      "path": "skills/geospatial",
+      "skill_count": 4
+    },
+    {
+      "id": "monitoring",
+      "title": "Monitoring & Alerts",
+      "description": "Brand, leak, domain and keyword monitoring playbooks.",
+      "path": "skills/monitoring",
+      "skill_count": 5
+    },
+    {
+      "id": "investigation",
+      "title": "Investigation Workflow",
+      "description": "Casefile method, evidence handling, reporting and hypothesis tracking.",
+      "path": "skills/investigation",
+      "skill_count": 6
+    },
+    {
+      "id": "surface-dark",
+      "title": "Surface & Dark-Web Edge",
+      "description": "Public paste/forum/market *mentions* monitoring — no illicit access guidance.",
+      "path": "skills/surface-dark",
+      "skill_count": 4
+    }
+  ],
+  "skill_count": 55
+}

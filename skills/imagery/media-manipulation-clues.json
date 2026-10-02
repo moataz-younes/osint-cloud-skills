@@ -1,0 +1,33 @@
+{
+  "id": "media-manipulation-clues",
+  "title": "Media Manipulation Clues",
+  "category": "imagery",
+  "level": "advanced",
+  "tags": [
+    "deepfake",
+    "forgery",
+    "verification"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Screen for basic manipulation indicators in media.",
+  "objective": "Verification checklist outcome.",
+  "steps": [
+    "Check compression artifacts and cloned regions.",
+    "Compare with known originals via reverse search.",
+    "Inspect lighting/reflection inconsistencies.",
+    "For video, check audio sync and metadata.",
+    "Escalate to specialist tools when needed."
+  ],
+  "queries": [],
+  "tools": [
+    "InVID/WeVerify style workflows",
+    "manual inspection"
+  ],
+  "outputs": [
+    "verification checklist"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "imagery"
+}

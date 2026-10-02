@@ -1,0 +1,36 @@
+{
+  "id": "subdomain-passive",
+  "title": "Passive Subdomain Discovery",
+  "category": "network",
+  "level": "beginner",
+  "tags": [
+    "subdomains",
+    "passive",
+    "enum"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Enumerate subdomains using only passive datasets.",
+  "objective": "Deduped subdomain list with sources.",
+  "steps": [
+    "Query CT logs.",
+    "Pull from passive DNS / public enumerators.",
+    "Merge and dedupe.",
+    "Tag interesting names (vpn, staging, admin, dev).",
+    "No active brute force unless authorized."
+  ],
+  "queries": [
+    "%.example.com"
+  ],
+  "tools": [
+    "crt.sh",
+    "Amass passive",
+    "Subfinder passive sources"
+  ],
+  "outputs": [
+    "subdomain inventory"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "network"
+}

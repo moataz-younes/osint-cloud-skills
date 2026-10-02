@@ -1,0 +1,35 @@
+{
+  "id": "paste-doc-fragments",
+  "title": "Paste & Fragment Hunting",
+  "category": "documents",
+  "level": "beginner",
+  "tags": [
+    "pastes",
+    "fragments",
+    "code"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Find document/config fragments on public paste sites.",
+  "objective": "Paste hit log with keywords.",
+  "steps": [
+    "Define unique strings (project codenames, domains).",
+    "Search paste indexes and public mirrors.",
+    "Preserve raw links and capture dates.",
+    "Classify: junk vs actionable.",
+    "Escalate credential-looking material to IR — do not use."
+  ],
+  "queries": [
+    "\"example.com\" password",
+    "\"BEGIN PRIVATE KEY\" example.com"
+  ],
+  "tools": [
+    "paste search engines"
+  ],
+  "outputs": [
+    "paste hit log"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "documents"
+}

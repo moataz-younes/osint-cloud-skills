@@ -1,0 +1,39 @@
+{
+  "id": "cloud-incident-osint",
+  "title": "Cloud Incident OSINT Checklist",
+  "category": "investigation",
+  "level": "advanced",
+  "tags": [
+    "incident-response",
+    "cloud",
+    "timeline"
+  ],
+  "providers": [
+    "aws",
+    "azure",
+    "gcp",
+    "generic"
+  ],
+  "summary": "OSINT workflow for suspected cloud-related incidents.",
+  "objective": "OSINT incident brief.",
+  "steps": [
+    "Define scope/time window/incident type.",
+    "Pull public mentions and vendor status.",
+    "Rebuild public asset map for the window.",
+    "Preserve evidence with timestamps/hashes.",
+    "Separate facts vs hypotheses."
+  ],
+  "queries": [
+    "company (breach OR leak OR \"data exposed\")"
+  ],
+  "tools": [
+    "archive.org",
+    "status pages",
+    "case notes"
+  ],
+  "outputs": [
+    "OSINT incident brief"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "investigation"
+}

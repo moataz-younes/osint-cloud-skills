@@ -1,0 +1,34 @@
+{
+  "id": "evidence-preservation",
+  "title": "Evidence Preservation Basics",
+  "category": "investigation",
+  "level": "beginner",
+  "tags": [
+    "hashing",
+    "preservation",
+    "chain"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Preserve web/file evidence with integrity in mind.",
+  "objective": "Preserved artifacts with hashes.",
+  "steps": [
+    "Save WARC/PDF/screenshot as appropriate.",
+    "Hash files (SHA256).",
+    "Record collection time and tool.",
+    "Keep originals immutable.",
+    "Document chain-of-custody if required."
+  ],
+  "queries": [],
+  "tools": [
+    "browser save",
+    "hash tools",
+    "archive.org"
+  ],
+  "outputs": [
+    "preserved evidence set"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "investigation"
+}

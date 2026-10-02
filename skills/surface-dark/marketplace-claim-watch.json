@@ -1,0 +1,33 @@
+{
+  "id": "marketplace-claim-watch",
+  "title": "Public Marketplace Claim Watch",
+  "category": "surface-dark",
+  "level": "advanced",
+  "tags": [
+    "claims",
+    "extortion",
+    "monitoring"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Track public extortion/leak claims mentioning a brand — defensively.",
+  "objective": "Claim timeline for IR leadership.",
+  "steps": [
+    "Use vendor intelligence feeds you subscribe to legally.",
+    "Capture claim text, actor alias, timestamps.",
+    "Do not negotiate or download leaked dumps casually.",
+    "Coordinate legal/IR immediately on credible claims.",
+    "Maintain need-to-know handling."
+  ],
+  "queries": [],
+  "tools": [
+    "commercial TI portals",
+    "news"
+  ],
+  "outputs": [
+    "claim timeline"
+  ],
+  "ethics": "Defensive monitoring only; no participation in illegal markets.",
+  "section": "surface-dark"
+}

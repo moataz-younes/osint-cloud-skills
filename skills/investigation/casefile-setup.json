@@ -1,0 +1,34 @@
+{
+  "id": "casefile-setup",
+  "title": "Casefile Setup Checklist",
+  "category": "investigation",
+  "level": "beginner",
+  "tags": [
+    "casefile",
+    "process",
+    "evidence"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Start every OSINT case with a clean structure.",
+  "objective": "Folder/template ready for evidence.",
+  "steps": [
+    "Create case ID and scope statement.",
+    "Define authorized questions.",
+    "Prepare folders: raw, processed, notes, export.",
+    "Start timeline and source log.",
+    "Record ethics/legal constraints up front."
+  ],
+  "queries": [],
+  "tools": [
+    "notes app",
+    "spreadsheet",
+    "hash utilities"
+  ],
+  "outputs": [
+    "case skeleton"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "investigation"
+}

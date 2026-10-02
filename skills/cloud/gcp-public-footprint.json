@@ -1,0 +1,36 @@
+{
+  "id": "gcp-public-footprint",
+  "title": "GCP Public Footprint Clues",
+  "category": "provider",
+  "level": "intermediate",
+  "tags": [
+    "gcp",
+    "firebase",
+    "appspot"
+  ],
+  "providers": [
+    "gcp"
+  ],
+  "summary": "Find Google Cloud public endpoints related to a target.",
+  "objective": "Document Firebase/App Engine/Cloud Run/GCS clues.",
+  "steps": [
+    "CT/web search for appspot/run.app/web.app/firebaseio.",
+    "Inspect legally obtained apps for Firebase project IDs.",
+    "Note storage.googleapis.com links in public pages.",
+    "Record project-like IDs in public JS.",
+    "Passive validation only unless authorized."
+  ],
+  "queries": [
+    "site:appspot.com company",
+    "site:run.app company"
+  ],
+  "tools": [
+    "crt.sh",
+    "devtools"
+  ],
+  "outputs": [
+    "GCP endpoint inventory"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "cloud"
+}

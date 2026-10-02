@@ -1,0 +1,37 @@
+{
+  "id": "email-pivot",
+  "title": "Email Address Pivoting",
+  "category": "identity",
+  "level": "beginner",
+  "tags": [
+    "email",
+    "gravatar",
+    "breaches"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Pivot from an email to accounts, avatars, and public mentions.",
+  "objective": "Build an account/presence map from one email.",
+  "steps": [
+    "Normalize email and capture first-seen context.",
+    "Check Gravatar/public profile hashes where applicable.",
+    "Search quotes of the full email on the web.",
+    "Look for GitHub/GitLab commits and paste mentions.",
+    "If using breach datasets, only via lawful/owned-domain services."
+  ],
+  "queries": [
+    "\"name@example.com\"",
+    "site:github.com name@example.com"
+  ],
+  "tools": [
+    "search engines",
+    "GitHub",
+    "HIBP (authorized)"
+  ],
+  "outputs": [
+    "email dossier"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "people"
+}

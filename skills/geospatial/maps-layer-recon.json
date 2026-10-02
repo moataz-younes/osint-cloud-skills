@@ -1,0 +1,34 @@
+{
+  "id": "maps-layer-recon",
+  "title": "Maps Layer Recon",
+  "category": "geospatial",
+  "level": "beginner",
+  "tags": [
+    "maps",
+    "osm",
+    "satellite"
+  ],
+  "providers": [
+    "generic"
+  ],
+  "summary": "Use public map layers to understand a place.",
+  "objective": "Place brief with map citations.",
+  "steps": [
+    "Compare satellite vs street imagery dates.",
+    "Note POIs, roads, fences, construction.",
+    "Use OSM historical edits when useful.",
+    "Capture screenshots with lat/lon and timestamp.",
+    "Avoid doxxing private residences unnecessarily."
+  ],
+  "queries": [],
+  "tools": [
+    "Google Maps",
+    "OSM",
+    "Bing Maps"
+  ],
+  "outputs": [
+    "place brief"
+  ],
+  "ethics": "Authorized investigations and public sources only. Do not access systems without permission.",
+  "section": "geospatial"
+}
